@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>05CF4837-2724-4252-A443-DDBE048DCA31</string>
+	<key>IDESourceControlProjectName</key>
+	<string>BlurrySideBar</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>850743A5F9DBF75EB5541AC510BB51A988468020</key>
+		<string>https://github.com/ke2ulpatani/BlurrySideBar.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>BlurrySideBar.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>850743A5F9DBF75EB5541AC510BB51A988468020</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ke2ulpatani/BlurrySideBar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>850743A5F9DBF75EB5541AC510BB51A988468020</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>850743A5F9DBF75EB5541AC510BB51A988468020</string>
+			<key>IDESourceControlWCCName</key>
+			<string>BlurrySideBar</string>
+		</dict>
+	</array>
+</dict>
+</plist>

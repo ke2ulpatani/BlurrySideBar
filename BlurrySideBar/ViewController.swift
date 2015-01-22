@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController ,SideBarDelegate{
+class ViewController: UIViewController /*,SideBarDelegate*/{
 
     var sideBar : SideBar = SideBar()
     
@@ -23,9 +23,9 @@ class ViewController: UIViewController ,SideBarDelegate{
         // Dispose of any resources that can be recreated.
     }
     
-    func sideBarDidSelectButtonAtIndex(index: Int) {
-        
-    }
+//    func sideBarDidSelectButtonAtIndex(index: Int) {
+//        
+//    }
 
 }
 

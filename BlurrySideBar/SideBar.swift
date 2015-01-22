@@ -8,14 +8,14 @@
 
 import UIKit
 
-@objc protocol SideBarDelegate{
-    func sideBarDidSelectButtonAtIndex(index:Int)
-    optional func sideBarWillOpen()
-    optional func sideBarWillClose()
-    
-}
+//@objc protocol SideBarDelegate{
+//    func sideBarDidSelectButtonAtIndex(index:Int)
+//    optional func sideBarWillOpen()
+//    optional func sideBarWillClose()
+//    
+//}
 
-class SideBar: NSObject,SideBarTableViewControllerDelegate {
+class SideBar: NSObject/*,SideBarTableViewControllerDelegate*/ {
     
     let barWidth : CGFloat = 150.0
     let sideBarTableViewTopInset :CGFloat = 64.0
@@ -24,7 +24,7 @@ class SideBar: NSObject,SideBarTableViewControllerDelegate {
     let originView : UIView!
     
     var animator:UIDynamicAnimator!
-    var delegate:SideBarDelegate?
+    //var delegate:SideBarDelegate?
     var isSideBarOpen = false
     
     override init() {
@@ -59,16 +59,15 @@ class SideBar: NSObject,SideBarTableViewControllerDelegate {
         blurView.frame = sideBarContainerView.bounds
         sideBarContainerView.addSubview(blurView)
         
-        sideBarTableViewController.delegate = self
+        //sideBarTableViewController.tableView.delegate = self
         sideBarTableViewController.tableView.frame = sideBarContainerView.bounds
         sideBarTableViewController.tableView.clipsToBounds = false
         sideBarTableViewController.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         sideBarTableViewController.tableView.backgroundColor = UIColor.clearColor()
         sideBarTableViewController.tableView.scrollsToTop = false
-        sideBarTableViewController.tableView.contentInset = UIEdgeInsets(top: sideBarTableViewTopInset, left: 0, bottom: 0, right: 0)
+        sideBarTableViewController.tableView.contentInset = UIEdgeInsets(top:sideBarTableViewTopInset, left: 0, bottom: 0, right: 0)
         sideBarTableViewController.tableView.reloadData()
         sideBarContainerView.addSubview(sideBarTableViewController.tableView)
-        
     }
     
     func handleSwipe(recognizer:UISwipeGestureRecognizer)
@@ -76,12 +75,12 @@ class SideBar: NSObject,SideBarTableViewControllerDelegate {
         if recognizer.direction == UISwipeGestureRecognizerDirection.Left
         {
             showSideBar(false)
-            delegate?.sideBarWillClose?()
+            //delegate?.sideBarWillClose?()
         }
         else
         {
             showSideBar(true)
-            delegate?.sideBarWillOpen?()
+            //delegate?.sideBarWillOpen?()
         }
     }
     
@@ -116,9 +115,11 @@ class SideBar: NSObject,SideBarTableViewControllerDelegate {
         
     }
     
-    func sideBarControlDidSelectRow(indexpath: NSIndexPath) {
-        
-        delegate?.sideBarDidSelectButtonAtIndex(indexpath.row)
-        
-    }
+//    func sideBarControlDidSelectRow(indexpath: NSIndexPath) {
+//        
+//        delegate?.sideBarDidSelectButtonAtIndex(indexpath.row)
+//        
+//    }
+    
+    
 }

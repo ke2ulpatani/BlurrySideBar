@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol SideBarTableViewControllerDelegate{
-    func sideBarControlDidSelectRow(indexpath: NSIndexPath)
-}
+//protocol SideBarTableViewControllerDelegate{
+//    func sideBarControlDidSelectRow(indexpath: NSIndexPath)
+//}
 
 class SideBarTableViewController: UITableViewController {
 
-    var delegate : SideBarTableViewControllerDelegate?
+    //var delegate : SideBarTableViewControllerDelegate?
     var tableData : [String] = []
     
     
@@ -56,7 +56,10 @@ class SideBarTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        delegate?.sideBarControlDidSelectRow(indexPath)
+            var alert = UIAlertView()
+            alert.message = "\(tableData[indexPath.row])"
+            alert.show()
+//        delegate?.sideBarControlDidSelectRow(indexPath)
     }
 
 }
